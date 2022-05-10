@@ -37,6 +37,29 @@ const double superscript_raise = 0.44;
 
 namespace Label {
 
+#ifdef WIN32
+#pragma warning(disable: 4996)
+    struct tm* gmtime_r(time_t* _clock, struct tm* _result)
+    {
+        struct tm* p = gmtime(_clock);
+
+        if (p)
+            *(_result) = *p;
+
+        return p;
+    }
+
+    struct tm* localtime_r(time_t* _clock, struct tm* _result)
+    {
+        struct tm* p = localtime(_clock);
+
+        if (p)
+            *(_result) = *p;
+
+        return p;
+    }
+#endif // WIN32
+
 static QString FormattedNumber(double val, QString format_in) {
   const int strlen = 100;
   char cstring[strlen];

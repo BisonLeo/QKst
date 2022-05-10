@@ -15,7 +15,12 @@
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <fcntl.h>
+#ifdef WIN32
+#include <io.h>
+#pragma warning(disable: 4996)
+#else
 #include <unistd.h>
+#endif
 
 #include "bis.h"
 
