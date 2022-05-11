@@ -1,10 +1,19 @@
 #include "QKst.h"
-#include <QtWidgets/QApplication>
+#include "application.h"
+
+//#include <QtWidgets/QApplication>
 
 int main(int argc, char *argv[])
 {
-    QApplication a(argc, argv);
-    QKst w;
+    Kst::Application app(argc, argv);
+    
+    app.initMainWindow();
+    if (app.mainWindow()->initFromCommandLine()) {
+        app.mainWindow()->show();
+        return app.exec();
+    }
+
+    Kst::QKst w;
     w.show();
-    return a.exec();
+    return app.exec();
 }

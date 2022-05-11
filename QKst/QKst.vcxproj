@@ -55,7 +55,7 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
-    <IncludePath>.;..\src\libkst;..\src\widgets;..\src\libkstmath;$(IncludePath)</IncludePath>
+    <IncludePath>.;..\src\libkst;..\src\widgets;..\src\libkstmath;..\build\src\widgets;$(IncludePath)</IncludePath>
     <OutDir>$(SolutionDir)INSTALLED\bin\</OutDir>
     <LibraryPath>$(SolutionDir)INSTALLED\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
@@ -65,7 +65,7 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Link>
-      <AdditionalDependencies>kst2appd.lib;kst2widgetsd.lib;kst2mathd.lib;kst2cored.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>kst2widgetsd.lib;kst2mathd.lib;kst2cored.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -100,19 +100,148 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="applicationsettings.cpp" />
+    <ClCompile Include="arrowitem.cpp" />
+    <ClCompile Include="arrowitemdialog.cpp" />
+    <ClCompile Include="arrowpropertiestab.cpp" />
+    <ClCompile Include="arrowscriptinterface.cpp" />
+    <ClCompile Include="boxitem.cpp" />
+    <ClCompile Include="builtingraphics.cpp" />
+    <ClCompile Include="buttonitem.cpp" />
+    <ClCompile Include="cartesianrenderitem.cpp" />
+    <ClCompile Include="circledimensionstab.cpp" />
+    <ClCompile Include="circleitem.cpp" />
+    <ClCompile Include="circleitemdialog.cpp" />
+    <ClCompile Include="commandlineparser.cpp" />
+    <ClCompile Include="defaultlabelpropertiestab.cpp" />
+    <ClCompile Include="dialog.cpp" />
+    <ClCompile Include="dialogpage.cpp" />
+    <ClCompile Include="dialogtab.cpp" />
+    <ClCompile Include="dimensionstab.cpp" />
+    <ClCompile Include="document.cpp" />
+    <ClCompile Include="editmultiplewidget.cpp" />
+    <ClCompile Include="ellipseitem.cpp" />
+    <ClCompile Include="filltab.cpp" />
+    <ClCompile Include="formatgridhelper.cpp" />
+    <ClCompile Include="graphicsfactory.cpp" />
+    <ClCompile Include="labelcreator.cpp" />
+    <ClCompile Include="labeldimensionstab.cpp" />
+    <ClCompile Include="labelitem.cpp" />
+    <ClCompile Include="labelitemdialog.cpp" />
+    <ClCompile Include="labelpropertiestab.cpp" />
+    <ClCompile Include="labelrenderer.cpp" />
+    <ClCompile Include="labelscriptinterface.cpp" />
+    <ClCompile Include="layoutboxitem.cpp" />
+    <ClCompile Include="layouttab.cpp" />
+    <ClCompile Include="legenditem.cpp" />
+    <ClCompile Include="legendscriptinterface.cpp" />
+    <ClCompile Include="linedimensionstab.cpp" />
+    <ClCompile Include="lineedititem.cpp" />
+    <ClCompile Include="lineitem.cpp" />
+    <ClCompile Include="lineitemdialog.cpp" />
+    <ClCompile Include="pictureitem.cpp" />
+    <ClCompile Include="plotaxis.cpp" />
+    <ClCompile Include="plotitem.cpp" />
+    <ClCompile Include="plotitemmanager.cpp" />
+    <ClCompile Include="plotmarkers.cpp" />
+    <ClCompile Include="plotrenderitem.cpp" />
+    <ClCompile Include="plotscriptinterface.cpp" />
+    <ClCompile Include="scene.cpp" />
+    <ClCompile Include="scriptserver.cpp" />
+    <ClCompile Include="selectionrect.cpp" />
+    <ClCompile Include="sessionmodel.cpp" />
+    <ClCompile Include="sharedaxisboxitem.cpp" />
+    <ClCompile Include="stroketab.cpp" />
+    <ClCompile Include="svgitem.cpp" />
+    <ClCompile Include="tabwidget.cpp" />
+    <ClCompile Include="view.cpp" />
+    <ClCompile Include="viewcommand.cpp" />
+    <ClCompile Include="viewgridlayout.cpp" />
+    <ClCompile Include="viewitem.cpp" />
+    <ClCompile Include="viewitemdialog.cpp" />
+    <ClCompile Include="viewitemscriptinterface.cpp" />
     <QtRcc Include="QKst.qrc" />
+    <QtUic Include="arrowpropertiestab.ui" />
+    <QtUic Include="circledimensionstab.ui" />
+    <QtUic Include="defaultlabelpropertiestab.ui" />
+    <QtUic Include="dialog.ui" />
+    <QtUic Include="dialogpage.ui" />
+    <QtUic Include="dimensionstab.ui" />
+    <QtUic Include="editmultiplewidget.ui" />
+    <QtUic Include="filltab.ui" />
+    <QtUic Include="labelcreator.ui" />
+    <QtUic Include="labeldimensionstab.ui" />
+    <QtUic Include="labelpropertiestab.ui" />
+    <QtUic Include="layouttab.ui" />
+    <QtUic Include="linedimensionstab.ui" />
     <QtUic Include="QKst.ui" />
     <QtMoc Include="QKst.h" />
+    <ClCompile Include="application.cpp" />
+    <ClCompile Include="builtindatasources.cpp" />
+    <ClCompile Include="datagui.cpp" />
+    <ClCompile Include="datasourcepluginfactory.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="QKst.cpp" />
+    <QtUic Include="stroketab.ui" />
   </ItemGroup>
   <ItemGroup>
+    <QtMoc Include="lineedititem.h" />
+    <QtMoc Include="scriptserver.h" />
+    <QtMoc Include="sessionmodel.h" />
+    <QtMoc Include="plotscriptinterface.h" />
+    <QtMoc Include="lineitemdialog.h" />
+    <QtMoc Include="labelscriptinterface.h" />
+    <QtMoc Include="linedimensionstab.h" />
+    <QtMoc Include="pictureitem.h" />
+    <QtMoc Include="svgitem.h" />
+    <QtMoc Include="stroketab.h" />
+    <QtMoc Include="layouttab.h" />
+    <QtMoc Include="filltab.h" />
+    <QtMoc Include="dimensionstab.h" />
+    <QtMoc Include="dialog.h" />
+    <QtMoc Include="viewitemdialog.h" />
+    <QtMoc Include="labelpropertiestab.h" />
+    <QtMoc Include="labelitemdialog.h" />
+    <QtMoc Include="labeldimensionstab.h" />
+    <QtMoc Include="viewitemscriptinterface.h" />
+    <QtMoc Include="viewgridlayout.h" />
+    <QtMoc Include="labelitem.h" />
+    <QtMoc Include="lineitem.h" />
+    <QtMoc Include="ellipseitem.h" />
+    <QtMoc Include="labelcreator.h" />
+    <QtMoc Include="plotitemmanager.h" />
+    <QtMoc Include="plotaxis.h" />
+    <QtMoc Include="legendscriptinterface.h" />
+    <QtMoc Include="dialogtab.h" />
+    <QtMoc Include="dialogpage.h" />
+    <QtMoc Include="defaultlabelpropertiestab.h" />
+    <QtMoc Include="labelrenderer.h" />
+    <QtMoc Include="sharedaxisboxitem.h" />
+    <QtMoc Include="plotitem.h" />
+    <QtMoc Include="legenditem.h" />
+    <QtMoc Include="layoutboxitem.h" />
+    <QtMoc Include="view.h" />
+    <QtMoc Include="scene.h" />
+    <QtMoc Include="viewitem.h" />
+    <QtMoc Include="plotrenderitem.h" />
+    <QtMoc Include="application.h" />
+    <QtMoc Include="applicationsettings.h" />
+    <QtMoc Include="cartesianrenderitem.h" />
+    <QtMoc Include="boxitem.h" />
+    <QtMoc Include="circleitem.h" />
+    <QtMoc Include="circleitemdialog.h" />
+    <QtMoc Include="circledimensionstab.h" />
+    <QtMoc Include="arrowitem.h" />
+    <QtMoc Include="buttonitem.h" />
+    <QtMoc Include="arrowitemdialog.h" />
+    <QtMoc Include="arrowscriptinterface.h" />
+    <QtMoc Include="arrowpropertiestab.h" />
+    <QtMoc Include="commandlineparser.h" />
     <ClInclude Include="config.h" />
+    <QtMoc Include="tabwidget.h" />
+    <QtMoc Include="editmultiplewidget.h" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\build\src\libkstapp\kst2app.vcxproj">
-      <Project>{bbe2da86-2fbe-30e7-8e69-b572dfd1ccf1}</Project>
-    </ProjectReference>
     <ProjectReference Include="..\build\src\libkstmath\kst2math.vcxproj">
       <Project>{d27ae264-9804-3541-8cc1-5e59f38af0b9}</Project>
     </ProjectReference>
