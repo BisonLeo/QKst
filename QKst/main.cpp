@@ -13,7 +13,4 @@ int main(int argc, char *argv[])
         return app.exec();
     }
 
-    Kst::QKst w;
-    w.show();
-    return app.exec();
 }

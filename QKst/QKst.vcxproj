@@ -113,6 +113,7 @@
     <ClCompile Include="circleitem.cpp" />
     <ClCompile Include="circleitemdialog.cpp" />
     <ClCompile Include="commandlineparser.cpp" />
+    <ClCompile Include="debugdialog.cpp" />
     <ClCompile Include="defaultlabelpropertiestab.cpp" />
     <ClCompile Include="dialog.cpp" />
     <ClCompile Include="dialogpage.cpp" />
@@ -139,6 +140,7 @@
     <ClCompile Include="lineedititem.cpp" />
     <ClCompile Include="lineitem.cpp" />
     <ClCompile Include="lineitemdialog.cpp" />
+    <ClCompile Include="logwidget.cpp" />
     <ClCompile Include="pictureitem.cpp" />
     <ClCompile Include="plotaxis.cpp" />
     <ClCompile Include="plotitem.cpp" />
@@ -163,6 +165,7 @@
     <QtRcc Include="QKst.qrc" />
     <QtUic Include="arrowpropertiestab.ui" />
     <QtUic Include="circledimensionstab.ui" />
+    <QtUic Include="debugdialog.ui" />
     <QtUic Include="defaultlabelpropertiestab.ui" />
     <QtUic Include="dialog.ui" />
     <QtUic Include="dialogpage.ui" />
@@ -185,6 +188,8 @@
     <QtUic Include="stroketab.ui" />
   </ItemGroup>
   <ItemGroup>
+    <QtMoc Include="logwidget.h" />
+    <QtMoc Include="debugdialog.h" />
     <QtMoc Include="lineedititem.h" />
     <QtMoc Include="scriptserver.h" />
     <QtMoc Include="sessionmodel.h" />
